@@ -9,7 +9,10 @@ dotenv.config();
 const usuarioValido = process.env.E2E_USER;
 const passwordValida = process.env.E2E_PASS;
 
-test.skip(!usuarioValido || !passwordValida, 'E2E_USER y E2E_PASS son obligatorios para este test.');
+test.skip(
+    !usuarioValido || !passwordValida,
+    'E2E_USER y E2E_PASS son obligatorios para este test.',
+);
 
 let helpers: Helpers;
 let paginaLogin: PaginaLogin;

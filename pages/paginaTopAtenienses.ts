@@ -76,10 +76,7 @@ export class PaginaTopAtenienses {
         );
         await expect(tarjeta.getByText(resumenPattern)).toBeVisible();
 
-        const nombrePattern = new RegExp(
-            `#${rango}\\s+${this.escapeRegExp(nombre)}`,
-            'i',
-        );
+        const nombrePattern = new RegExp(`#${rango}\\s+${this.escapeRegExp(nombre)}`, 'i');
         await expect(tarjeta.getByText(nombrePattern)).toBeVisible();
 
         const regexPuntos = new RegExp(`${puntos}\\s*pts`, 'i');

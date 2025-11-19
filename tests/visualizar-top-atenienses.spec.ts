@@ -22,7 +22,11 @@ test('TC-15: Visualizar top 10 público', { tag: '@smoke' }, async () => {
     await paginaTopAtenienses.validarParticipantesTop10();
     await paginaTopAtenienses.validarAlertasDeshabilitadas();
 
-    const refrescarLeaderboard = helpers.esperarPorRespuestaAPI('/leaderboard?limit=10', 'GET', 200);
+    const refrescarLeaderboard = helpers.esperarPorRespuestaAPI(
+        '/leaderboard?limit=10',
+        'GET',
+        200,
+    );
     await paginaTopAtenienses.actualizarRanking();
     await refrescarLeaderboard;
     await paginaTopAtenienses.validarParticipantesTop10();

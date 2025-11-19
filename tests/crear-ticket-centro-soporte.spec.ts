@@ -17,8 +17,7 @@ test('TC-24: Crear ticket desde el centro de soporte', { tag: '@smoke' }, async 
     const timestamp = Date.now();
     const datosTicket: DatosTicketSoporte = {
         titulo: `Ticket ${timestamp}`,
-        descripcion:
-            `El ${timestamp}`,
+        descripcion: `El ${timestamp}`,
         categoria: 'Centro de soporte',
         prioridad: 'Alta',
         entorno: 'Chrome 125 / macOS',

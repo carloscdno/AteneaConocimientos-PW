@@ -54,8 +54,9 @@ export class PaginaCentroSoporte {
         });
         this.botonAgregarEvidenciaUrl = page.getByRole('button', { name: 'Agregar enlace' });
         this.botonCrearTicket = page.getByRole('button', { name: 'Crear ticket' });
-        this.alertaExito = page
-            .getByText('¡Al parecer encontraste un defecto nuevo!', { exact: false })
+        this.alertaExito = page.getByText('¡Al parecer encontraste un defecto nuevo!', {
+            exact: false,
+        });
         this.titulosTicket = page
             .getByRole('heading', { level: 6 })
             .filter({ hasText: /^Ticket/i });

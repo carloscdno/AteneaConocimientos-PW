@@ -113,6 +113,13 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install chromium
 
+      - name: Create .env file
+        run: |
+          echo "E2E_USER=${{ secrets.E2E_USER }}" >> .env
+          echo "E2E_PASS=${{ secrets.E2E_PASS }}" >> .env
+          echo "E2E_ADMIN_USER=${{ secrets.E2E_ADMIN_USER }}" >> .env
+          echo "E2E_ADMIN_PASS=${{ secrets.E2E_ADMIN_PASS }}" >> .env
+
       - name: Run Playwright tests
         env:
           BASE_URL: ${{ env.QA_URL }}

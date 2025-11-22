@@ -114,7 +114,10 @@ export class PaginaCursoPostman {
     }
 
     async consultarHistorialActividades(request: APIRequestContext, token: string) {
-        const url = new URL('/api/students/activity-history?limit=10', this.obtenerApiBaseURL()).toString();
+        const url = new URL(
+            '/api/students/activity-history?limit=10',
+            this.obtenerApiBaseURL(),
+        ).toString();
         return request.get(url, {
             headers: {
                 Authorization: `Bearer ${token}`,

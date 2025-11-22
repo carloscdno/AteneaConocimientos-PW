@@ -97,5 +97,5 @@ test('TC-13: Acreditar XP por quiz de Postman', async ({ page }) => {
     );
 
     expect(registroQuiz).toBeTruthy();
-    expect(registroQuiz.points_earned).toBe(quizPayload.pointsAwarded);
+    expect(registroQuiz!.points_earned).toBe(quizPayload.pointsAwarded);
 });

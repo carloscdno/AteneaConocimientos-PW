@@ -12,7 +12,9 @@ export class PaginaDashboard {
         this.linkMisTalleres = page.getByRole('tab', { name: 'Mis Talleres' });
         this.botonMenuUsuario = page.getByRole('button', { name: /account of current user/i });
         this.opcionCerrarSesion = page.getByRole('menuitem', { name: 'Cerrar Sesión' });
-        this.headingTalleresDisponibles = page.getByRole('heading', { name: 'Talleres disponibles' });
+        this.headingTalleresDisponibles = page.getByRole('heading', {
+            name: 'Comienza aquí: elige un taller y crea tu camino de aprendizaje.',
+        });
     }
 
     async navegarADashboard() {

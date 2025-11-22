@@ -35,4 +35,3 @@ export class PaginaNotificaciones {
         return new RegExp(escaped, 'i');
     }
 }
-

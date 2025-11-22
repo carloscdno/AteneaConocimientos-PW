@@ -66,4 +66,3 @@ test('TC-11: Primer logro por lección completada', async ({ page }) => {
     );
     expect(logroPrimerosPasos, 'El perfil debe incluir el logro first_steps').toBeTruthy();
 });
-

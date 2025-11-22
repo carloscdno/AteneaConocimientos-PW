@@ -14,7 +14,9 @@ export class PaginaTaller {
         this.page = page;
         this.botonAbrirAyuda = page.getByRole('button', { name: 'Ayuda y atajos de teclado' });
         this.botonCerrarGuia = page.getByRole('button', { name: '¡Entendido, comenzar!' });
-        this.botonMarcarComoCompletada = page.getByRole('button', { name: 'Marcar como Completada' });
+        this.botonMarcarComoCompletada = page.getByRole('button', {
+            name: 'Marcar como Completada',
+        });
         this.botonLeccionCompletada = page.getByRole('button', { name: '✓ Lección Completada' });
         this.textoProgreso = page.getByRole('heading', { name: /Progreso:/i });
         this.headingTemario = page.getByRole('heading', { name: 'Temario del Taller' });
